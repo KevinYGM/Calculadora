@@ -5,7 +5,8 @@ document.onkeydown = teclado;
 const pantallaGeneral = document.getElementById('pantalla-general');
 const pantallaOperacion = document.getElementById('pantalla-operacion');
 const pantallaResultado = document.getElementById('pantalla-resultado');
-const botones = document.getElementById('botones');
+const cajonBotones = document.getElementById('cajon-botones');
+const botones = document.querySelectorAll('.gBotones');
 const boton9 = document.getElementById('b9');
 const boton8 = document.getElementById('b8');
 const boton7 = document.getElementById('b7');
@@ -27,28 +28,6 @@ const botonPunto = document.getElementById('punto');
 const botonRaiz = document.getElementById("raiz-cuadrada");
 const botonPorcentaje = document.getElementById("porcentaje");
 
-//DECLARANDO ESTADO DESHABILITADO DE LA CALCULADORA AL INICIO.
-boton9.disabled = true;
-boton8.disabled = true;
-boton7.disabled = true;
-boton6.disabled = true;
-boton5.disabled = true;
-boton4.disabled = true;
-boton3.disabled = true;
-boton2.disabled = true;
-boton1.disabled = true;
-boton0.disabled = true;
-botonBorrarParcial.disabled = true;
-botonSumar.disabled = true;
-botonRestar.disabled = true;
-botonMultiplicar.disabled = true;
-botonDividir.disabled = true;
-botonIgual.disabled = true;
-botonPunto.disabled = true;
-botonRaiz.disabled = true;
-botonPorcentaje.disabled = true;
-botonBorrarTotal.disabled = false;
-
 //VARIABLES GLOBALES DE UTILIDAD DURANTE EL DESARROLLO
 let variablePantalla= "";
 let visible= "";
@@ -60,16 +39,20 @@ let operadorVisible;
 let evento;
 let tecla;
 
+//DECLARANDO ESTADO DESHABILITADO DE LA CALCULADORA AL INICIO.
+botones.forEach(button => button.disabled = true);
+botonBorrarTotal.disabled = false;
+
 function teclado (teclaPulsada) { 
     evento = teclaPulsada || window.event;
     k=evento.keyCode;
 
     if (k==103 || k==55){imprimirNumero(7);} 
     if (k==104 || k==56){imprimirNumero(8);} 
-    if (k==105 || k==57){{imprimirNumero(9);}}
-    if (k==100 || k==52 ){imprimirNumero(4);} 
+    if (k==105 || k==57){imprimirNumero(9);}
+    if (k==100 || k==52){imprimirNumero(4);} 
     if (k==101 || k==53){imprimirNumero(5);} 
-    if (k==102 || k==54){imprimirNumero(6);;} 
+    if (k==102 || k==54){imprimirNumero(6);} 
     if (k==97 || k==49){imprimirNumero(1);} 
     if (k==98 || k==50){imprimirNumero(2);} 
     if (k==99 || k==51){imprimirNumero(3);} 

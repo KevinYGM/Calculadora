@@ -5,40 +5,40 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Calculadora Kevin</title>
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <section id="cuerpoCalculadora">
-    <h1>➕ CALCULADORA ➖</h1>
+    <h1>➕ CALCULADORA 1 ➖</h1>
     
     <div id="pantalla-general">
         <div id="pantalla-operacion"></div>
         <div id="pantalla-resultado"></div>
     </div>
-    <div id="botones">
-        <button id="borrar-total" class="estilo-botones-borrar">AC</button>
-        <button id="borrar-parcial" class="estilo-botones-borrar">C</button>
-        <button id="raiz-cuadrada" class="estilo-botones">√ </button>
-        <button id="porcentaje" class="estilo-botones">%</button>
-        <button id="b7" onclick=imprimirNumero(7) class="estilo-botones">7</button>
-        <button id="b8" onclick=imprimirNumero(8) class="estilo-botones">8</button>
-        <button id="b9" onclick=imprimirNumero(9) class="estilo-botones">9</button>
-        <button id="b-multiplicar" onclick=imprimirOperacion(3) class="estilo-botones">x</button>
-        <button id="b4" onclick=imprimirNumero(4) class="estilo-botones">4</button>
-        <button id="b5" onclick=imprimirNumero(5) class="estilo-botones">5</button>
-        <button id="b6" onclick=imprimirNumero(6) class="estilo-botones">6</button>
-        <button id="b-dividir" onclick=imprimirOperacion(4) class="estilo-botones">÷</button>
-        <button id="b1" onclick=imprimirNumero(1) class="estilo-botones">1</button>
-        <button id="b2" onclick=imprimirNumero(2) class="estilo-botones">2</button>
-        <button id="b3" onclick=imprimirNumero(3) class="estilo-botones">3</button>
-        <button id="b-restar" onclick=imprimirOperacion(2) class="estilo-botones">-</button>
-        <button id="b0" onclick=imprimirNumero(0) class="estilo-botones">0</button>
-        <button id="punto" class="estilo-botones">.</button>
-        <button id="b-resultado" class="estilo-botones">=</button>
-        <button id="b-sumar" onclick=imprimirOperacion(1) class="estilo-botones">+</button>
+    <div id="cajon-botones">
+        <button id="borrar-total" class="estilo-botones-borrar gBotones">AC</button>
+        <button id="borrar-parcial" class="estilo-botones-borrar gBotones">C</button>
+        <button id="raiz-cuadrada" class="estilo-botones gBotones">√ </button>
+        <button id="porcentaje" class="estilo-botones gBotones">%</button>
+        <button id="b7" onclick=imprimirNumero(7) class="estilo-botones gBotones">7</button>
+        <button id="b8" onclick=imprimirNumero(8) class="estilo-botones gBotones">8</button>
+        <button id="b9" onclick=imprimirNumero(9) class="estilo-botones gBotones">9</button>
+        <button id="b-multiplicar" onclick=imprimirOperacion(3) class="estilo-botones gBotones">x</button>
+        <button id="b4" onclick=imprimirNumero(4) class="estilo-botones gBotones">4</button>
+        <button id="b5" onclick=imprimirNumero(5) class="estilo-botones gBotones">5</button>
+        <button id="b6" onclick=imprimirNumero(6) class="estilo-botones gBotones">6</button>
+        <button id="b-dividir" onclick=imprimirOperacion(4) class="estilo-botones gBotones">÷</button>
+        <button id="b1" onclick=imprimirNumero(1) class="estilo-botones gBotones">1</button>
+        <button id="b2" onclick=imprimirNumero(2) class="estilo-botones gBotones">2</button>
+        <button id="b3" onclick=imprimirNumero(3) class="estilo-botones gBotones">3</button>
+        <button id="b-restar" onclick=imprimirOperacion(2) class="estilo-botones gBotones">-</button>
+        <button id="b0" onclick=imprimirNumero(0) class="estilo-botones gBotones">0</button>
+        <button id="punto" class="estilo-botones gBotones">.</button>
+        <button id="b-resultado" class="estilo-botones gBotones">=</button>
+        <button id="b-sumar" onclick=imprimirOperacion(1) class="estilo-botones gBotones">+</button>
         
     </div>
 </section>
 <script src="./calculadora.js"></script>
-<link rel="stylesheet" href="./style.css">
 </body>
 </html>
